@@ -3,7 +3,6 @@ import React from 'react'
 export default function Header() {
     return (
         <header className='header'>
-
             <div className='top_header_wraper'>
                 <div className='top_header container'>
                     <p>Регион: Харьков</p>
@@ -26,7 +25,11 @@ export default function Header() {
             </div>
             <div className='navigation container'>
                 <div className='navigation_left'>
-                    <img src="./img/logo.svg" alt="#" />
+                    <div className='logo'>
+                        <img src="./img/logo.svg" alt="#" />
+                        <p>Магазин<br />
+                            Автотюинга</p>
+                    </div>
                     <nav>
                         <ul>
                             <li>Каталог</li>
@@ -39,7 +42,9 @@ export default function Header() {
                         </ul>
                     </nav>
                 </div>
+                <input type="text" />
                 <button type='button'>Категории</button>
+                <span class="btn_open_modal_menu"></span>
             </div>
         </header>
     )

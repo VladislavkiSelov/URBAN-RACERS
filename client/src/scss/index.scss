@@ -8,10 +8,13 @@
 
 html {
     height: 100%;
+    background: $main_3;
 }
 
 body {
     font-size: $main;
+    font-weight: $font-weight4;
+    color: $main_4;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
 }

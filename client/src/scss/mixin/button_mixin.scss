@@ -6,4 +6,20 @@
     background: $main_color;
     color: $main_1;
     font-size: 16px;
+    font-weight: $font-weight6;
+    cursor: pointer;
+
+    @media(max-width:1200px) {
+        padding: 15px 70px;
+    }
+
+    &:hover {
+        transition: 0.5s;
+        background: $main_hover;
+    }
+
+    &:active {
+        transition: 0.5s;
+        background: $main_active;
+    }
 }
