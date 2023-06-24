@@ -43,6 +43,11 @@ export default function Header() {
                     </nav>
                 </div>
                 <input type="text" />
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10.8994" cy="10.8994" r="6" stroke="#F05454" stroke-width="2" />
+                    <rect x="14.4355" y="15.8491" width="2" height="7" transform="rotate(-45 14.4355 15.8491)" fill="#F05454" />
+                </svg>
+
                 <button type='button'>Категории</button>
                 <span class="btn_open_modal_menu"></span>
             </div>

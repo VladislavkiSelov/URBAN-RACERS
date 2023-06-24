@@ -81,6 +81,18 @@
     padding-bottom: 15px;
     background: $main_1;
     border-radius: 4px;
+    position: relative;
+
+    svg {
+        display: none;
+        position: absolute;
+        right: 60px;
+        top: 30;
+
+        @media(max-width:1040px) {
+            display: block;
+        }
+    }
 
     @media(max-width:900px) {
         margin-top: 25px;
@@ -173,7 +185,6 @@
     height: 3px;
     position: relative;
     width: 20px;
-    right: -5px;
 
     @media(max-width:1040px) {
         display: block;
