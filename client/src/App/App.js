@@ -1,10 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './scss/App.scss';
-import MainPage from '../pages/MainPage';
 import Header from '../section/Header';
+import MainPage from '../pages/MainPage';
 import Footer from '../section/Footer';
-
-
 
 function App() {
   return (

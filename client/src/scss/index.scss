@@ -1,0 +1,17 @@
+@import './reset.scss';
+@import './fonts.scss';
+@import './variable.scss';
+@import './typography.scss';
+@import './mixin/button_mixin.scss';
+@import '../App/App.scss';
+@import '../section/header.scss';
+
+html {
+    height: 100%;
+}
+
+body {
+    font-size: $main;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
