@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './scss/App.scss';
 import MainPage from '../pages/MainPage';
 import Header from '../section/Header';
 import Footer from '../section/Footer';
-import './scss/App.scss';
+
 
 
 function App() {

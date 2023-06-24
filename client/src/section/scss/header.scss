@@ -1,6 +1,10 @@
+@import '../../App/scss/mixin/button_mixin.scss';
+@import '../../App/scss/base/variable.scss';
+
 .top_header {
     display: flex;
     justify-content: space-between;
+    padding: 12px 0;
 }
 
 .top_header_left {
@@ -36,6 +40,7 @@
     svg {
         margin-left: 15px;
         display: block;
+        margin-right: 5px;
     }
 
     display: flex;
@@ -44,13 +49,30 @@
 .navigation {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
 
+    button {
+        @include btn;
+        position: relative;
+        right: -10px;
+    }
 }
 
 .navigation_left {
     display: flex;
 
+    img {
+        display: block;
+        margin-right: 40px;
+    }
+
     ul {
         display: flex;
+
+        li {
+            margin-right: 40px;
+            white-space: nowrap;
+        }
     }
 }
