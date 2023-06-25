@@ -11,6 +11,7 @@ export default function MainPage() {
     const arrayAuto = [auto1, auto2, auto3, auto4, auto5,];
     const [autoFirst, setAutoFirst] = useState(arrayAuto[0]);
     const [autoSecond, setAutoSecond] = useState(arrayAuto[1]);
+
     setInterval(() => {
         arrayAuto.forEach((item, index) => {
             if (autoFirst === item) {
@@ -27,6 +28,7 @@ export default function MainPage() {
             }
         })
     }, 5000);
+
     return (
         <main className='main'>
             <section className='section_1 container'>

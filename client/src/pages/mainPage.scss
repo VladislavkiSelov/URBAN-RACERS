@@ -1,9 +1,11 @@
 .section_1 {
+    margin-top: 60px;
     display: flex;
     justify-content: space-between;
     gap: 20px;
 
     h1 {
+        font-family: 'Montserrat', sans-serif;
         font-size: $h1;
         font-weight: $font-weight7;
         white-space: nowrap;
@@ -15,6 +17,7 @@
     }
 
     p {
+        font-family: 'Raleway', sans-serif;
         font-size: $typography_4;
         line-height: $line-height_1;
         max-width: 570px;
