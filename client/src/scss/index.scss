@@ -5,10 +5,11 @@
 @import './mixin/button_mixin.scss';
 @import '../App/App.scss';
 @import '../section/header.scss';
+@import '../section/footer.scss';
 
 html {
     height: 100%;
-    background: $main_3;
+    background: $main_5;
 }
 
 body {

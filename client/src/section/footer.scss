@@ -1,0 +1,233 @@
+// .wraper_footer {
+//     background: $main_3;
+//     position: relative;
+
+//     &::before {
+//         content: "";
+//         background: $main_3;
+//         height: 290px;
+//         position: absolute;
+//         left: -50px;
+//         top: -100px;
+//         right: -50px;
+//         transform: rotate(4.54deg);
+//         z-index: -1;
+//     }
+// }
+
+// .footer {
+//     display: flex;
+//     padding-top: 65px;
+//     padding-bottom: 25px;
+
+//     .table_contents {
+//         font-weight: $font-weight6;
+//         margin-bottom: 16px;
+//     }
+
+//     ul {
+//         li {
+//             margin-bottom: 16px;
+//             cursor: pointer;
+
+//             &:hover {
+//                 transition: 0.3s;
+//                 color: $main_hover;
+//             }
+
+//             &:active {
+//                 transition: 0.3s;
+//                 color: $main_active;
+//             }
+//         }
+//     }
+
+//     .logo {
+//         display: flex;
+//         align-items: center;
+//         margin-bottom: 20px;
+
+//         img {
+//             display: block;
+//             width: 56px;
+//             height: auto;
+//         }
+
+//         p {
+//             font-size: 8px;
+//             font-weight: $font-weight7;
+//         }
+//     }
+
+//     &>div {
+//         margin-right: 40px;
+//     }
+
+//     .social_link {
+//         a {
+//             margin-right: 25px;
+
+//             &:hover {
+//                 svg {
+//                     transition: 0.7s;
+//                     transform: scale(1.2);
+
+//                     * {
+//                         fill: $main_hover;
+//                     }
+//                 }
+//             }
+//         }
+
+//         margin-bottom:25px;
+//     }
+
+//     .footer_tbl_1 {
+//         p {
+//             font-size: $typography_1;
+//             line-height: $line-height_1;
+//             font-weight: $font-weight5;
+//             max-width: 384px;
+//         }
+//     }
+// }
+
+
+
+
+
+.wraper_footer {
+    background: $main_3;
+    position: relative;
+
+    &::before {
+        content: "";
+        background: $main_3;
+        height: 290px;
+        position: absolute;
+        left: -50px;
+        top: -100px;
+        right: -50px;
+        transform: rotate(4.54deg);
+        z-index: -1;
+    }
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: auto auto auto auto 1fr;
+    grid-row: auto auto;
+
+    .register_login {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        margin: 0 auto;
+
+        .login {
+            font-weight: $font-weight6;
+            background: inherit;
+            color: $main_color;
+            border: none;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .register {
+            @extend .login;
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: 1px solid $main_color;
+            text-transform: uppercase;
+            transition: 0.5s;
+
+            &:hover {
+                background-color: $main_hover;
+                color: $main_1;
+            }
+
+            &:active {
+                background-color: $main_active;
+            }
+        }
+
+        p {
+            font-size: $typography_1;
+            margin-top: 25px;
+            font-weight: $font-weight6;
+        }
+    }
+
+    padding-top: 65px;
+    padding-bottom: 25px;
+
+    .table_contents {
+        font-weight: $font-weight6;
+        margin-bottom: 16px;
+    }
+
+    ul {
+        li {
+            margin-bottom: 16px;
+            cursor: pointer;
+
+            &:hover {
+                transition: 0.3s;
+                color: $main_hover;
+            }
+
+            &:active {
+                transition: 0.3s;
+                color: $main_active;
+            }
+        }
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        img {
+            display: block;
+            width: 56px;
+            height: auto;
+        }
+
+        p {
+            font-size: 8px;
+            font-weight: $font-weight7;
+        }
+    }
+
+    &>div {
+        margin-right: 40px;
+    }
+
+    .social_link {
+        a {
+            margin-right: 25px;
+
+            &:hover {
+                svg {
+                    transition: 0.7s;
+                    transform: scale(1.2);
+
+                    * {
+                        fill: $main_hover;
+                    }
+                }
+            }
+        }
+
+        margin-bottom:25px;
+    }
+
+    .footer_tbl_1 {
+        p {
+            font-size: $typography_1;
+            line-height: $line-height_1;
+            font-weight: $font-weight5;
+            max-width: 384px;
+        }
+    }
+}
