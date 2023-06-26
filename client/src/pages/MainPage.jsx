@@ -9,8 +9,8 @@ import auto5 from './img/auto5.jpg';
 export default function MainPage() {
     const arrayAuto = [auto1, auto2, auto3, auto4, auto5,];
     const [autoFirst, setAutoFirst] = useState(0);
-    const [status, setStatus] = useState(true);
     const [autoSecond, setAutoSecond] = useState(1);
+    const [status, setStatus] = useState(true);
 
     useEffect(() => {
         setInterval(() => {
@@ -36,7 +36,7 @@ export default function MainPage() {
                 <div className='section_1_right'>
                     <div className='img_slide_1'>
                         <Transition in={status}
-                            timeout={700}
+                            timeout={1000}
                         >
                             {(state) => {
                                 return (<img className={`${state}`} src={arrayAuto[autoFirst]} alt="#" />)
@@ -45,7 +45,7 @@ export default function MainPage() {
                     </div>
                     <div className='img_slide_2' onClick={() => checkSlide()}>
                         <Transition in={status}
-                            timeout={700}
+                            timeout={1000}
                         >
                             {(state) => {
                                 return (<img className={`${state}`} src={arrayAuto[autoSecond]} alt="#" />)
