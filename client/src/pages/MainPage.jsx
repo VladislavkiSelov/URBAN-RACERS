@@ -1,33 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import auto1 from './img/auto1.jpg';
 import auto2 from './img/auto2.jpg';
 import auto3 from './img/auto3.jpg';
 import auto4 from './img/auto4.jpg';
 import auto5 from './img/auto5.jpg';
-import { useState } from 'react'
+// import { useState } from 'react'
 
 
 export default function MainPage() {
     const arrayAuto = [auto1, auto2, auto3, auto4, auto5,];
-    const [autoFirst, setAutoFirst] = useState(arrayAuto[0]);
-    const [autoSecond, setAutoSecond] = useState(arrayAuto[1]);
+    const [autoFirst, setAutoFirst] = useState(0);
+    const [autoSecond, setAutoSecond] = useState(1);
 
-    setInterval(() => {
-        arrayAuto.forEach((item, index) => {
-            if (autoFirst === item) {
-                setAutoFirst(arrayAuto[++index])
-            }
-            if (autoSecond === item) {
-                setAutoSecond(arrayAuto[++index])
-            }
-            if (autoFirst === arrayAuto[arrayAuto.length - 1]) {
-                setAutoFirst(arrayAuto[0])
-            }
-            if (autoSecond === arrayAuto[arrayAuto.length - 1]) {
-                setAutoSecond(arrayAuto[0])
-            }
-        })
-    }, 5000);
+    useEffect(() => {
+        setInterval(() => {
+            setAutoFirst(current => {
+                const res = current === arrayAuto.length - 1 ? 0 : current + 1
+                return res
+            })
+            setAutoSecond(current => {
+                const res = current === arrayAuto.length - 1 ? 0 : current + 1
+                return res
+            })
+        }, 5000);
+    }, [])
 
     return (
         <main className='main'>
@@ -39,10 +35,10 @@ export default function MainPage() {
                 </div>
                 <div className='section_1_right'>
                     <div className='img_slide_1'>
-                        <img src={autoFirst} alt="#" />
+                        <img src={arrayAuto[autoFirst]} alt="#" />
                     </div>
                     <div className='img_slide_2'>
-                        <img src={autoSecond} alt="#" />
+                        <img src={arrayAuto[autoSecond]} alt="#" />
                     </div>
                 </div>
             </section>
