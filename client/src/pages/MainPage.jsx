@@ -19,6 +19,7 @@ export default function MainPage() {
             setStatus(false)
             setTimeout(() => setStatus(true), 7000)
         }, 8000);
+        return clearInterval()
     }, [])
 
     function checkSlide() {
@@ -51,6 +52,35 @@ export default function MainPage() {
                                 return (<img className={`${state}`} src={arrayAuto[autoSecond]} alt="#" />)
                             }}
                         </Transition>
+                    </div>
+                </div>
+            </section>
+            <section className='section_2'>
+                <div className='background_auto'></div>
+                <div className='wraper_section_2 container'>
+                    <div className='section_2_left'>
+                        <h2>Подбор по автомобилю</h2>
+                        <p>Ищите товары сразу для вашего автомобиля, это помжет сильно сузить ассортимент и ускорит выбор товаров. </p>
+                    </div>
+                    <div className='section_2_right'>
+                        <form>
+                            <select>
+                                <option value="1">Синий</option>
+                                <option value="2">Зеленый</option>
+                                <option value="3">Желтый</option>
+                            </select>
+                            <select>
+                                <option value="1">Синий</option>
+                                <option value="2">Зеленый</option>
+                                <option value="3">Желтый</option>
+                            </select>
+                            <select>
+                                <option value="1">Синий</option>
+                                <option value="2">Зеленый</option>
+                                <option value="3">Желтый</option>
+                            </select>
+                            <button>Найти</button>
+                        </form>
                     </div>
                 </div>
             </section>

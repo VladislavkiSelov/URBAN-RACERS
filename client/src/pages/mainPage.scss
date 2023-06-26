@@ -220,3 +220,64 @@
     }
 
 }
+
+
+.section_2 {
+    position: relative;
+}
+
+.background_auto {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    background: url(./img/Golf.png) 100% 100%/ 600px auto no-repeat;
+    z-index: -1;
+}
+
+.wraper_section_2 {
+    display: flex;
+    padding: 125px 0;
+
+    .section_2_left {
+        h2 {
+            font-size: $typography_5;
+            font-weight: $font-weight7;
+            color: $main_color;
+            margin-bottom: 45px;
+        }
+
+        p {
+            font-size: $typography_4;
+            max-width: 570px;
+            line-height: $line-height_1;
+        }
+    }
+
+    .section_2_right {
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 15px;
+            max-width: 725px;
+            max-height: 115px;
+        }
+
+        select {
+            max-width: 355px;
+            display: block;
+            border-radius: 2px;
+            border: 0.8px solid #D9D9D9;
+            background: $main_1;
+        }
+
+        button {
+            max-width: 355px;
+            display: block;
+            @include btn;
+        }
+    }
+}
