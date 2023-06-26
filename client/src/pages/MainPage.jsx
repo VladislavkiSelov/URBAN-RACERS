@@ -1,30 +1,30 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import { Transition } from 'react-transition-group';
 import auto1 from './img/auto1.jpg';
 import auto2 from './img/auto2.jpg';
 import auto3 from './img/auto3.jpg';
 import auto4 from './img/auto4.jpg';
 import auto5 from './img/auto5.jpg';
-// import { useState } from 'react'
-
 
 export default function MainPage() {
     const arrayAuto = [auto1, auto2, auto3, auto4, auto5,];
     const [autoFirst, setAutoFirst] = useState(0);
+    const [status, setStatus] = useState(true);
     const [autoSecond, setAutoSecond] = useState(1);
 
     useEffect(() => {
         setInterval(() => {
-            setAutoFirst(current => {
-                const res = current === arrayAuto.length - 1 ? 0 : current + 1
-                return res
-            })
-            setAutoSecond(current => {
-                const res = current === arrayAuto.length - 1 ? 0 : current + 1
-                return res
-            })
-        }, 5000);
+            setAutoFirst(current => current === arrayAuto.length - 1 ? 0 : current + 1)
+            setAutoSecond(current => current === arrayAuto.length - 1 ? 0 : current + 1)
+            setStatus(false)
+            setTimeout(() => setStatus(true), 7000)
+        }, 8000);
     }, [])
 
+    function checkSlide() {
+        setAutoFirst(current => current === arrayAuto.length - 1 ? 0 : autoSecond)
+        setAutoSecond(current => current === arrayAuto.length - 1 ? 0 : current + 1)
+    }
     return (
         <main className='main'>
             <section className='section_1 container'>
@@ -35,13 +35,28 @@ export default function MainPage() {
                 </div>
                 <div className='section_1_right'>
                     <div className='img_slide_1'>
-                        <img src={arrayAuto[autoFirst]} alt="#" />
+                        <Transition in={status}
+                            timeout={700}
+                        >
+                            {(state) => {
+                                return (<img className={`${state}`} src={arrayAuto[autoFirst]} alt="#" />)
+                            }}
+                        </Transition>
                     </div>
-                    <div className='img_slide_2'>
-                        <img src={arrayAuto[autoSecond]} alt="#" />
+                    <div className='img_slide_2' onClick={() => checkSlide()}>
+                        <Transition in={status}
+                            timeout={700}
+                        >
+                            {(state) => {
+                                return (<img className={`${state}`} src={arrayAuto[autoSecond]} alt="#" />)
+                            }}
+                        </Transition>
                     </div>
                 </div>
             </section>
         </main>
     )
 }
+
+
+
