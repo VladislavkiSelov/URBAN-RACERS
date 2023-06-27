@@ -1,8 +1,7 @@
 .form_answer_questions {
     display: flex;
     background: $main_1;
-    padding-top: 70px;
-    padding-bottom: 80px;
+    padding: 80px 15px;
 
     h2 {
         margin-left: 60px;
@@ -18,11 +17,21 @@
     display: flex;
     width: 100%;
 
+    @media(max-width: 1290px) {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
     label {
         display: block;
         margin-right: 10px;
         width: 100%;
         max-width: 355px;
+
+        @media(max-width: 1290px) {
+            margin-bottom: 15px;
+            margin-right: 0px;
+        }
     }
 
     button {
@@ -31,6 +40,11 @@
         padding-right: 60px;
         margin-left: 95px;
         margin-top: 10px;
+
+        @media(max-width: 1290px) {
+            width: 100%;
+            margin-left: 0px;
+        }
     }
 
     input {
@@ -44,5 +58,10 @@
     p {
         display: flex;
         align-items: center;
+
+        @media(max-width: 1290px) {
+            width: 100%;
+            max-width: 355px;
+        }
     }
 }
