@@ -6,11 +6,12 @@
 @import '../App/App.scss';
 @import '../section/header.scss';
 @import '../pages/mainPage.scss';
+@import '../components/formAnswerQuestions.scss';
 @import '../section/footer.scss';
 
 html {
     height: 100%;
-    background: $main_5;
+    background: $main_6;
     overflow: hidden;
     overflow-y: scroll;
 }

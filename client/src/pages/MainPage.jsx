@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Transition } from 'react-transition-group';
+import FormAnswerQuestions from '../components/FormAnswerQuestions';
 import auto1 from './img/auto1.jpg';
 import auto2 from './img/auto2.jpg';
 import auto3 from './img/auto3.jpg';
@@ -84,6 +85,84 @@ export default function MainPage() {
                     </div>
                 </div>
             </section>
+            <div className="section_3 container">
+                <FormAnswerQuestions />
+                <div className='wraper_section_3_main_content'>
+                    <div className='section_3_left'>
+                        <h2>Категории товаров</h2>
+                        <p>Выберите категорию котоаря вас интересует. Тут есть все – от ГБЦ до футболки с логотипом БМВ М повер-рейнджерс</p>
+                        <div className='show_product'>
+                            <h3>Показать все товары</h3>
+                            <h4>Перейти в каталог</h4>
+                        </div>
+                        <div className='check_product'>
+                            <div>
+                                <h3>Не знаете что выбрать ?</h3>
+                                <h4>Перейти в каталог</h4>
+                            </div>
+                            <img src="./img/image_5.png" alt="#" />
+                        </div>
+                    </div>
+                    <div className='section_3_right'>
+                        <div className="section_3_card">
+                            <img src="./img/12.png" alt="#" />
+                            <p>Трубины и турбокомплекты</p>
+                        </div>
+                        <div className="section_3_card">
+                            <img src="./img/2.png" alt="#" />
+                            <p>Трубины и турбокомплекты</p>
+                        </div>
+                        <div className="section_3_card">
+                            <img src="./img/11.png" alt="#" />
+                            <p>Трубины и турбокомплекты</p>
+                        </div>
+                        <div className="section_3_card">
+                            <img src="./img/1.png" alt="#" />
+                            <p>Трубины и турбокомплекты</p>
+                        </div>
+                        <div className="section_3_card">
+                            <img src="./img/3.png" alt="#" />
+                            <p>Трубины и турбокомплекты</p>
+                        </div>
+                        <div className="section_3_card">
+                            <img src="./img/3.png" alt="#" />
+                            <p>Трубины и турбокомплекты</p>
+                        </div>
+                        <div className="section_3_card">
+                            <img src="./img/7.png" alt="#" />
+                            <p>Трубины и турбокомплекты</p>
+                        </div>
+                        <div className="section_3_card">
+                            <img src="./img/5.png" alt="#" />
+                            <p>Трубины и турбокомплекты</p>
+                        </div>
+                        <div className="section_3_card">
+                            <img src="./img/8.png" alt="#" />
+                            <p>Трубины и турбокомплекты</p>
+                        </div>
+                        <div className="section_3_card">
+                            <img src="./img/6.png" alt="#" />
+                            <p>Трубины и турбокомплекты</p>
+                        </div>
+                        <div className="section_3_card">
+                            <img src="./img/9.png" alt="#" />
+                            <p>Трубины и турбокомплекты</p>
+                        </div>
+                        <div className="section_3_card">
+                            <img src="./img/3.png" alt="#" />
+                            <p>Трубины и турбокомплекты</p>
+                        </div>
+                        <div className="section_3_card">
+                            <img src="./img/10.png" alt="#" />
+                            <p>Трубины и турбокомплекты</p>
+                        </div>
+                        <div className="section_3_card">
+                            <img src="./img/4.png" alt="#" />
+                            <p>Трубины и турбокомплекты</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
     )
 }
