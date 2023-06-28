@@ -10,10 +10,6 @@
     cursor: pointer;
     white-space: nowrap;
 
-    @media(max-width:1200px) {
-        padding: 15px 70px;
-    }
-
     &:hover {
         transition: 0.5s;
         background: $main_hover;
@@ -22,5 +18,13 @@
     &:active {
         transition: 0.5s;
         background: $main_active;
+    }
+
+    @media(max-width:1200px) {
+        padding: 15px 70px;
+    }
+
+    @media(max-width:768px) {
+        font-size: $typography_4_mobile;
     }
 }

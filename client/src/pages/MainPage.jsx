@@ -80,7 +80,7 @@ export default function MainPage() {
                                 <option value="2">Зеленый</option>
                                 <option value="3">Желтый</option>
                             </select>
-                            <button>Найти</button>
+                            <button type='button'>Найти</button>
                         </form>
                     </div>
                 </div>

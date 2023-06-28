@@ -11,12 +11,16 @@
         white-space: nowrap;
         margin-bottom: 40px;
 
+        span {
+            color: $main_color;
+        }
+
         @media(max-width:1350px) {
             text-align: center;
         }
 
-        span {
-            color: $main_color;
+        @media(max-width:768px) {
+            font-size: $h1_mobile;
         }
     }
 
@@ -29,6 +33,10 @@
 
         @media(max-width:1350px) {
             max-width: 100%;
+        }
+
+        @media(max-width:768px) {
+            font-size: $typography_4_mobile;
         }
     }
 
@@ -64,6 +72,7 @@
 
         @media(max-width:840px) {
             width: 100%;
+            height: auto;
         }
 
         &:active {
@@ -154,6 +163,14 @@
     width: 100%;
     background: url(./img/Golf.png) 100% 100%/ 600px auto no-repeat;
     z-index: -1;
+
+    @media(max-width:768px) {
+        background: url(./img/Golf.png) 100% 100%/ 400px auto no-repeat;
+    }
+
+    @media(max-width:640px) {
+        background: none;
+    }
 }
 
 .wraper_section_2 {
@@ -161,22 +178,36 @@
     padding-top: 125px;
     padding-bottom: 125px;
 
-    @media(max-width:980px) {
-        display: block;
-    }
-
     .section_2_left {
         h2 {
             font-size: $typography_5;
             font-weight: $font-weight7;
             color: $main_color;
             margin-bottom: 45px;
+
+            @media(max-width:768px) {
+                font-size: $typography_5_mobile;
+                margin-bottom: 20px;
+            }
+
+            @media(max-width:640px) {
+                text-align: center;
+            }
         }
 
         p {
             font-size: $typography_4;
             max-width: 570px;
             line-height: $line-height_1;
+
+            @media(max-width:768px) {
+                font-size: $typography_4_mobile;
+                margin-bottom: 20px;
+            }
+
+            @media(max-width:640px) {
+                text-align: center;
+            }
         }
     }
 
@@ -210,6 +241,21 @@
             @include btn;
 
         }
+
+        @media(max-width:640px) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    @media(max-width:980px) {
+        display: block;
+    }
+
+    @media(max-width:768px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-bottom: 70px;
     }
 }
 
@@ -235,6 +281,10 @@
             font-size: $typography_5;
             color: $main_color;
             margin-bottom: 20px;
+
+            @media(max-width:768px) {
+                font-size: $typography_5_mobile;
+            }
         }
 
         &>p {
@@ -243,6 +293,10 @@
             max-width: 570px;
             margin-bottom: 15px;
             line-height: $line-height_1;
+
+            @media(max-width:768px) {
+                font-size: $typography_4_mobile;
+            }
         }
 
         .show_product {
@@ -263,11 +317,19 @@
                 font-size: $typography_3;
                 font-weight: $font-weight7;
                 margin-bottom: 10px;
+
+                @media(max-width:768px) {
+                    font-size: $typography_5_mobile;
+                }
             }
 
             h4 {
                 color: $main_color;
                 font-weight: $font-weight6;
+
+                @media(max-width:768px) {
+                    font-size: $typography_4_mobile;
+                }
 
                 &::after {
                     content: '\203a';
@@ -289,6 +351,10 @@
                 right: 0;
                 top: 0;
                 width: 100px;
+
+                @media(max-width:460px) {
+                    display: none;
+                }
             }
         }
     }
@@ -319,6 +385,10 @@
                 margin-bottom: 20px;
                 transition: 0.5s;
 
+                @media(max-width:460px) {
+                    width: 40px;
+                }
+
                 &:hover {
                     transform: scale(1.2);
                 }
@@ -327,6 +397,15 @@
             p {
                 text-align: center;
                 line-height: $line-height_1;
+
+                @media(max-width:460px) {
+                    font-size: $typography_1_mobile;
+                }
+            }
+
+            @media(max-width:460px) {
+                width: 130px;
+                height: 130px;
             }
         }
     }
