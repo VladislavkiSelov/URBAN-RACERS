@@ -169,7 +169,7 @@ export default function MainPage() {
                 <div className='section_4 container'>
                     <div className='section_4_top'>
                         <h2>Актуальное</h2>
-                        <div>
+                        <div className='box_btn_section4'>
                             <button type='button' className='active_btn'>Все</button>
                             <button type='button'>Новости</button>
                             <button type='button'>Акции</button>
