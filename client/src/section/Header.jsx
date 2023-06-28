@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
     return (
@@ -32,7 +33,8 @@ export default function Header() {
                     </div>
                     <nav>
                         <ul>
-                            <li>Каталог</li>
+                            <li><NavLink to="/">Главная</NavLink></li>
+                            <li><NavLink to="/category">Каталог</NavLink></li>
                             <li>О нас</li>
                             <li>Блоги и статьи</li>
                             <li>Контакты</li>
