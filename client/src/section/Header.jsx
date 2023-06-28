@@ -26,11 +26,12 @@ export default function Header() {
             </div>
             <div className='navigation container'>
                 <div className='navigation_left'>
-                    <div className='logo'>
-                        <img src="./img/logo.svg" alt="#" />
-                        <p>Магазин<br />
-                            Автотюинга</p>
-                    </div>
+                    <li><NavLink to="/">
+                        <div className='logo'>
+                            <img src="./img/logo.svg" alt="#" />
+                            <p>Магазин<br />
+                                Автотюинга</p>
+                        </div></NavLink></li>
                     <nav>
                         <ul>
                             <li><NavLink to="/">Главная</NavLink></li>

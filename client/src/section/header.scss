@@ -126,6 +126,14 @@
 .navigation_left {
     display: flex;
 
+    &>li {
+        list-style-type: none;
+
+        &>a {
+            text-decoration: none;
+        }
+    }
+
     .logo {
         display: flex;
         align-items: center;
@@ -161,14 +169,19 @@
                 margin-right: 20px;
             }
 
-            &:hover {
-                transition: 0.5s;
-                color: $main_hover;
-            }
-
             &:active {
                 transition: 0.5s;
                 color: $main_active;
+            }
+
+            a {
+                color: $main_4;
+                text-decoration: none;
+
+                &:hover {
+                    transition: 0.5s;
+                    color: $main_hover;
+                }
             }
         }
 
