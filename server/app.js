@@ -20,3 +20,10 @@ app.get('/api/category', (request, response) => {
     const dataResponse = JSON.stringify(productCategories);
     response.send(dataResponse)
 });
+
+app.get('/api/category/:categoryId', (request, response) => {
+    const categoryId = request.params.categoryId;
+    const result = productCategories.find((item) => item.name === categoryId);
+    const dataResponse = JSON.stringify(result.products);
+    response.send(dataResponse)
+});
