@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Transition } from 'react-transition-group';
+import ProductCategories from '../components/ProductCategories';
+import AdvertisingPromotions from '../components/AdvertisingPromotions';
+import FormAnswerQuestions from '../components/FormAnswerQuestions';
+import { NavLink } from 'react-router-dom';
 import auto1 from './img/auto1.jpg';
 import auto2 from './img/auto2.jpg';
 import auto3 from './img/auto3.jpg';
 import auto4 from './img/auto4.jpg';
 import auto5 from './img/auto5.jpg';
-import ProductCategories from '../components/ProductCategories';
-import AdvertisingPromotions from '../components/AdvertisingPromotions';
-import FormAnswerQuestions from '../components/FormAnswerQuestions';
 
 export default function MainPage() {
     const arrayAuto = [auto1, auto2, auto3, auto4, auto5,];
@@ -22,7 +23,6 @@ export default function MainPage() {
             setStatus(false)
             setTimeout(() => setStatus(true), 7000)
         }, 8000);
-        return clearInterval()
     }, [])
 
     function checkSlide() {
@@ -35,7 +35,7 @@ export default function MainPage() {
                 <div className='section_1_left'>
                     <h1>URBAN <span>RACERS</span></h1>
                     <p>Интернет-магазин тюнинг-комплектующих для современных автомобилей Audi, Skoda, Seat, Skoda, Porsche, BMW, Mercedes-Benz и др.Мы предлагаем только лучшие товары из Европы и США. Работаем напрямую с заводами, тем самым гарантируя отличные цены и сроки доставки.</p>
-                    <button>Категории</button>
+                    <NavLink to="/category"><button type='button'>Категории</button></NavLink>
                 </div>
                 <div className='section_1_right'>
                     <div className='img_slide_1'>

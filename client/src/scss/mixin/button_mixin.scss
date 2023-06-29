@@ -10,6 +10,11 @@
     cursor: pointer;
     white-space: nowrap;
 
+    &>a {
+        text-decoration: none;
+        color: $main_1;
+    }
+
     &:hover {
         transition: 0.5s;
         background: $main_hover;

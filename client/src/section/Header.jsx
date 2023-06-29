@@ -35,7 +35,7 @@ export default function Header() {
                     <nav>
                         <ul>
                             <li><NavLink to="/">Главная</NavLink></li>
-                            <li><NavLink to="/category">Каталог</NavLink></li>
+                            <li>Каталог</li>
                             <li>О нас</li>
                             <li>Блоги и статьи</li>
                             <li>Контакты</li>
@@ -50,8 +50,7 @@ export default function Header() {
                     <circle cx="10.8994" cy="10.8994" r="6" stroke="#F05454" stroke-width="2" />
                     <rect x="14.4355" y="15.8491" width="2" height="7" transform="rotate(-45 14.4355 15.8491)" fill="#F05454" />
                 </svg>
-
-                <button type='button'>Категории</button>
+                <NavLink to="/category"><button type='button'>Категории</button></NavLink>
                 <span class="btn_open_modal_menu"></span>
             </div>
         </header>
