@@ -7,7 +7,6 @@ import AdvertisingPromotions from '../components/AdvertisingPromotions';
 export default function CategoryPage() {
     const params = useParams();
     const [arrayProducts, setArrayProducts] = useState([])
-    console.log(params);
 
     useEffect(() => {
         fetch(`http://localhost:3000/api/category/${params.categoryId}`)

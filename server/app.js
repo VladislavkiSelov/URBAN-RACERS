@@ -25,3 +25,13 @@ app.get('/api/category/:categoryId', (request, response) => {
     const dataResponse = JSON.stringify(result.products);
     response.send(dataResponse)
 });
+
+
+app.get('/api/category/:categoryId/:productId', (request, response) => {
+    const categoryId = request.params.categoryId;
+    const productId = request.params.productId;
+    const resultArray = productCategories.find((item) => item.name === categoryId);
+    const resultId = resultArray.products.find((item) => productId == item.id)
+    const dataResponse = JSON.stringify(resultId);
+    response.send(dataResponse)
+});
