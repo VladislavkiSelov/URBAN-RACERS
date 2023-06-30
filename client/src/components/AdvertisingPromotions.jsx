@@ -16,7 +16,7 @@ export default function AdvertisingPromotions() {
                 <div className='section_4_bottom'>
                     <div className='section_4_card'>
                         <div className='box_img'>
-                            <img src="./img/news.png" alt="#" />
+                            <img src="../img/news.png" alt="#" />
                         </div>
                         <h3>Ломается ли ваг? После тюнинга</h3>
                         <p>Все что вы хотели спросить, но боялись. Расказываем, что будет с вашим поло после stage 3 REVO</p>
@@ -24,7 +24,7 @@ export default function AdvertisingPromotions() {
                     </div>
                     <div className='section_4_card'>
                         <div className='box_img'>
-                            <img src="./img/news.png" alt="#" />
+                            <img src="../img/news.png" alt="#" />
                         </div>
                         <h3>Ломается ли ваг? После тюнинга</h3>
                         <p>Все что вы хотели спросить, но боялись. Расказываем, что будет с вашим поло после stage 3 REVO</p>
@@ -32,7 +32,7 @@ export default function AdvertisingPromotions() {
                     </div>
                     <div className='section_4_card'>
                         <div className='box_img'>
-                            <img src="./img/news.png" alt="#" />
+                            <img src="../img/news.png" alt="#" />
                         </div>
                         <h3>Ломается ли ваг? После тюнинга</h3>
                         <p>Все что вы хотели спросить, но боялись. Расказываем, что будет с вашим поло после stage 3 REVO</p>
@@ -40,7 +40,7 @@ export default function AdvertisingPromotions() {
                     </div>
                     <div className='section_4_card'>
                         <div className='box_img'>
-                            <img src="./img/news.png" alt="#" />
+                            <img src="../img/news.png" alt="#" />
                         </div>
                         <h3>Ломается ли ваг? После тюнинга</h3>
                         <p>Все что вы хотели спросить, но боялись. Расказываем, что будет с вашим поло после stage 3 REVO</p>
@@ -48,7 +48,7 @@ export default function AdvertisingPromotions() {
                     </div>
                     <div className='section_4_card'>
                         <div className='box_img'>
-                            <img src="./img/news.png" alt="#" />
+                            <img src="../img/news.png" alt="#" />
                         </div>
                         <h3>Ломается ли ваг? После тюнинга</h3>
                         <p>Все что вы хотели спросить, но боялись. Расказываем, что будет с вашим поло после stage 3 REVO</p>
@@ -56,7 +56,7 @@ export default function AdvertisingPromotions() {
                     </div>
                     <div className='section_4_card'>
                         <div className='box_img'>
-                            <img src="./img/news.png" alt="#" />
+                            <img src="../img/news.png" alt="#" />
                         </div>
                         <h3>Ломается ли ваг? После тюнинга</h3>
                         <p>Все что вы хотели спросить, но боялись. Расказываем, что будет с вашим поло после stage 3 REVO</p>
@@ -64,7 +64,7 @@ export default function AdvertisingPromotions() {
                     </div>
                     <div className='section_4_card'>
                         <div className='box_img'>
-                            <img src="./img/news.png" alt="#" />
+                            <img src="../img/news.png" alt="#" />
                         </div>
                         <h3>Ломается ли ваг? После тюнинга</h3>
                         <p>Все что вы хотели спросить, но боялись. Расказываем, что будет с вашим поло после stage 3 REVO</p>
@@ -72,7 +72,7 @@ export default function AdvertisingPromotions() {
                     </div>
                     <div className='section_4_card'>
                         <div className='box_img'>
-                            <img src="./img/news.png" alt="#" />
+                            <img src="../img/news.png" alt="#" />
                         </div>
                         <h3>Ломается ли ваг? После тюнинга</h3>
                         <p>Все что вы хотели спросить, но боялись. Расказываем, что будет с вашим поло после stage 3 REVO</p>

@@ -5,6 +5,8 @@
 @import './mixin/button_mixin.scss';
 @import '../App/App.scss';
 @import '../section/header.scss';
+@import '../pages/categoryPage.scss';
+@import '../components/cardProductSmall.scss';
 @import '../pages/mainPage.scss';
 @import '../components/formAnswerQuestions.scss';
 @import '../components/productCategories.scss';
@@ -16,6 +18,11 @@ html {
     background: $main_6;
     overflow: hidden;
     overflow-y: scroll;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 body {

@@ -1,0 +1,57 @@
+.box_product {
+    padding: 20px;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $main_1;
+    border-radius: 4px;
+    transition: 0.8s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+
+    h3 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: $font-weight6;
+        font-size: $typography_2;
+    }
+
+    p {
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        color: $main_7;
+        margin-bottom: 20px;
+    }
+
+    .box_price {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .icon_basket {
+            &:hover {
+                svg {
+                    transition: 0.7s;
+                    transform: scale(1.15);
+
+                    * {
+                        fill: $main_hover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.box_img {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}

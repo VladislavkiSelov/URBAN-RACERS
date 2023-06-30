@@ -14,8 +14,6 @@ app.listen(PORT, function () {
     console.log('we started server on ' + PORT);
 });
 
-
-
 app.get('/api/category', (request, response) => {
     const dataResponse = JSON.stringify(productCategories);
     response.send(dataResponse)

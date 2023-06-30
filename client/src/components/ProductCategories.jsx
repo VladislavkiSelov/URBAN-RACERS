@@ -11,8 +11,6 @@ export default function ProductCategories() {
             )
     }, [])
 
-    // let URL = `/category ${item.category}`
-
     return (
         <section className='section_3_wraper'>
             <div className="section_3 container">

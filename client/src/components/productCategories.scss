@@ -104,6 +104,11 @@
         max-width: 1087px;
         margin-left: 60px;
 
+        a {
+            text-decoration: none;
+            color: $main_4;
+        }
+
         @media(max-width:1040px) {
             margin-left: 0px;
             justify-content: center;
@@ -122,22 +127,31 @@
                 margin: 0 auto;
                 margin-bottom: 20px;
                 transition: 0.5s;
+                width: 70px;
+                height: auto;
 
                 @media(max-width:460px) {
                     width: 40px;
-                }
-
-                &:hover {
-                    transform: scale(1.2);
                 }
             }
 
             p {
                 text-align: center;
                 line-height: $line-height_1;
+                transition: 0.5s;
 
                 @media(max-width:460px) {
                     font-size: $typography_1_mobile;
+                }
+            }
+
+            &:hover {
+                &>img {
+                    transform: scale(1.2);
+                }
+
+                &>p {
+                    transform: scale(1.2);
                 }
             }
 

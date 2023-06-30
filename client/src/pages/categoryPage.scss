@@ -1,0 +1,10 @@
+.wraper_products {
+    background: url("../pages/img/baclground_road.png") top 0 right 0 no-repeat;
+}
+
+.box_products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 150px;
+}
