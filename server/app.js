@@ -27,7 +27,7 @@ app.get('/api/category/:categoryId', (request, response) => {
 });
 
 
-app.get('/api/category/:categoryId/:productId', (request, response) => {
+app.get('/api/category/:categoryId/product/:productId', (request, response) => {
     const categoryId = request.params.categoryId;
     const productId = request.params.productId;
     const resultArray = productCategories.find((item) => item.name === categoryId);

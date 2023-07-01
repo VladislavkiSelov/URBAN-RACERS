@@ -7,14 +7,12 @@ export default function ProductCardPage() {
     const [product, setProduct] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/api/category/${params.categoryId}/${params.productId}`)
+        fetch(`http://localhost:3000/api/category/${params.categoryId}/product/${params.productId}`)
             .then((res) => res.json())
             .then((res) => setProduct(res)
             )
     }, []);
 
-    // const key = (Object.keys(product).length !== 0) ? Object.keys(product.characteristics) : [];
-    // const value = (Object.values(product).length !== 0) ? Object.values(product.characteristics) : [];
     return (
         <div className='block_product container'>
             <div className='block_product_left'>

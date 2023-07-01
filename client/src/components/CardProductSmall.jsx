@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 export default function CardProductSmall({ product }) {
     const params = useParams();
     return (
-        <NavLink to={`/category/${params.categoryId}/${product.id}`}>
+        <NavLink to={`/category/${params.categoryId}/product/${product.id}`}>
             <div className='box_product'>
                 <div className='box_img'><img src={product.img} alt="#" /></div>
                 <h3>{product.name}</h3>

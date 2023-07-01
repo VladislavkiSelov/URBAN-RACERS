@@ -15,7 +15,7 @@ function App() {
           <Route path="/" element={<MainPage />}></Route>
           <Route path="/category" element={<CategoriesPage />}></Route>
           <Route path="/category/:categoryId" element={<CategoryPage />}></Route>
-          <Route path="/category/:categoryId/:productId" element={<ProductCardPage />}></Route>
+          <Route path="/category/:categoryId/product/:productId" element={<ProductCardPage />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
@@ -24,3 +24,4 @@ function App() {
 }
 
 export default App;
+
