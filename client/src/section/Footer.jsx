@@ -6,7 +6,7 @@ export default function Footer() {
             <footer className='footer container'>
                 <div className='footer_tbl_1'>
                     <div className='logo'>
-                        <img src="../img/logo.svg" alt="#" />
+                        <img src="/img/logo.svg" alt="#" />
                         <p>Магазин<br />
                             Автотюинга</p>
                     </div>

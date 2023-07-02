@@ -28,7 +28,7 @@ export default function Header() {
                 <div className='navigation_left'>
                     <li><NavLink to="/">
                         <div className='logo'>
-                            <img src="../img/logo.svg" alt="#" />
+                            <img src="/img/logo.svg" alt="#" />
                             <p>Магазин<br />
                                 Автотюинга</p>
                         </div></NavLink></li>

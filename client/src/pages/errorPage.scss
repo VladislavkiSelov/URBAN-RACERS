@@ -1,0 +1,39 @@
+.box_error {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    max-width: 355px;
+
+    img {
+        margin: 0 auto;
+        display: block;
+        max-width: 280px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: $typography_6;
+        color: $main_2;
+        margin-bottom: 30px;
+    }
+
+    .no_details {
+        text-align: center;
+    }
+
+
+    h2 {
+        font-size: 72px;
+        color: $main_2;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    button {
+        @include btn;
+        padding: 15px 0;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

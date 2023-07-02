@@ -1,9 +1,118 @@
 .block_product {
     display: flex;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.block_product_left {
+    h3 {
+        font-size: $typography_4;
+        font-weight: $font-weight7;
+        margin-bottom: 30px;
+        color: $main_2;
+        max-width: 425px;
+    }
+
+    h4 {
+        font-size: $typography_4;
+        font-weight: $font-weight7;
+        margin-bottom: 30px;
+        color: $main_2;
+    }
+
+    button {
+        @include btn;
+    }
+}
+
+.block_product_right {
+    margin-left: 45px;
+
+    h3 {
+        font-size: $typography_4;
+        font-weight: $font-weight7;
+        color: $main_2;
+        margin-bottom: 15px;
+    }
+
+    &>p {
+        font-size: $typography_2;
+        margin-bottom: 20px;
+        max-width: 425px;
+    }
+
+    .box_btn {
+        margin-bottom: 15px;
+
+        button {
+            color: $main_7;
+            background: inherit;
+            border: none;
+            cursor: pointer;
+            transition: 0.6s;
+            padding: 13px 25px;
+            margin-right: 12px;
+            font-weight: $font-weight6;
+
+            @media(max-width:768px) {
+                padding: 13px 15px;
+                color: rgba(138, 142, 133, 1);
+            }
+
+            &:hover {
+                color: $main_hover;
+            }
+        }
+
+        .active_btn {
+            @include btn;
+            font-size: $main;
+            padding: 13px 25px;
+
+            &:hover {
+                color: $main_1;
+            }
+
+            @media(max-width:768px) {
+                padding: 13px 15px;
+            }
+        }
+
+        .box_btn_section4 {
+            @media(max-width:768px) {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    .box_information {
+        border-radius: 4px;
+
+        h4 {
+            font-size: $typography_2;
+            color: $main_2;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 10px;
+
+            span {
+                color: $main_4;
+                font-weight: $font-weight7;
+            }
+        }
+
+        background: $main_1;
+        padding: 10px;
+        padding-right: 80px;
+    }
 }
 
 .box_img_product {
     width: 540px;
     height: 430px;
     overflow: hidden;
+    margin-bottom: 30px;
 }
