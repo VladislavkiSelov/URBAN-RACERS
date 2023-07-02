@@ -41,7 +41,7 @@ export default function Header() {
                             <li>Контакты</li>
                             <li>Распродажи</li>
                             <li>Информация</li>
-                            <li>Корзина</li>
+                            <li><NavLink to="/basket">Корзина</NavLink></li>
                         </ul>
                     </nav>
                 </div>

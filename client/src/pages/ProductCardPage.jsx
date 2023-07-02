@@ -1,16 +1,11 @@
-import React from 'react'
-import { useParams, } from 'react-router-dom';
+import React from 'react';
+import { json, useParams, } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import FormAnswerQuestions from '../components/FormAnswerQuestions'
-
-
+import FormAnswerQuestions from '../components/FormAnswerQuestions';
 
 export default function ProductCardPage() {
-
     const params = useParams();
-
     const [product, setProduct] = useState([]);
-
     useEffect(() => {
         fetch(`http://localhost:3000/api/category/${params.categoryId}/product/${params.productId}`)
             .then((res) => res.json())
@@ -18,16 +13,31 @@ export default function ProductCardPage() {
             )
     }, []);
 
+    function addProductBasket() {
+        let statusСheck = true;
+        const storage = JSON.parse(localStorage.getItem('products')) || [];
+        storage.forEach(element => {
+            if (element.id === product.id) {
+                ++element.number
+                localStorage.setItem('products', JSON.stringify(storage))
+                return statusСheck = false;
+            }
+        });
+        if (statusСheck === true) {
+            localStorage.setItem('products', JSON.stringify([...storage, product]))
+        }
+    }
+
     return (
         <>
             <div className='block_product container'>
                 <div className='block_product_left'>
                     <div className='box_img_product'>
-                        <img src={product.img} alt="" />
+                        <img src={product.img} alt="#" />
                     </div>
                     <h3>{product.name}</h3>
                     <h4>Цена: {product.price} ₽</h4>
-                    <button>Купить</button>
+                    <button type='button' onClick={addProductBasket}>Купить</button>
                 </div>
                 <div className='block_product_right'>
                     <h3>Описание</h3>

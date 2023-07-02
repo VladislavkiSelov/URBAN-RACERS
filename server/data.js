@@ -7,6 +7,7 @@ export const productCategories = [
         products: [
             {
                 id: 11,
+                number: 1,
                 name: 'Комплект винтовой подвески BC Racing серия BR тип RA',
                 img: '/img/Frame22.png',
                 price: '2780',
@@ -29,6 +30,7 @@ export const productCategories = [
             },
             {
                 id: 12,
+                number: 1,
                 name: 'Комплект винтовой подвески BC Racing серия BR тип RA',
                 img: '/img/Frame22.png',
                 price: '2890',
@@ -51,6 +53,7 @@ export const productCategories = [
             },
             {
                 id: 13,
+                number: 1,
                 name: 'Комплект винтовой подвески BC Racing серия BR тип RA',
                 img: '/img/Frame22.png',
                 price: '3210',
@@ -73,6 +76,7 @@ export const productCategories = [
             },
             {
                 id: 14,
+                number: 1,
                 name: 'Комплект винтовой подвески BC Racing серия BR тип RA',
                 img: '/img/Frame22.png',
                 price: '3210',
@@ -95,6 +99,7 @@ export const productCategories = [
             },
             {
                 id: 15,
+                number: 1,
                 name: 'Комплект винтовой подвески BC Racing серия BR тип RA',
                 img: '../img/Frame22.png',
                 price: '3210',
@@ -117,6 +122,7 @@ export const productCategories = [
             },
             {
                 id: 16,
+                number: 1,
                 name: 'Комплект винтовой подвески BC Racing серия BR тип RA',
                 img: '/img/Frame22.png',
                 price: '3210',
@@ -139,6 +145,7 @@ export const productCategories = [
             },
             {
                 id: 17,
+                number: 1,
                 name: 'Комплект винтовой подвески BC Racing серия BR тип RA',
                 img: '/img/Frame22.png',
                 price: '3210',
@@ -161,6 +168,7 @@ export const productCategories = [
             },
             {
                 id: 18,
+                number: 1,
                 name: 'Комплект винтовой подвески BC Racing серия BR тип RA',
                 img: '/img/Frame22.png',
                 price: '3210',
