@@ -46,7 +46,7 @@ export default function BasketPage() {
             <section className='basket container'>
                 <div className='basket_left'>
                     <h2>Корзина</h2>
-                    {products.map(product => (
+                    {products.length > 0 ? products.map(product => (
                         <div className='card_product_basket'>
                             <div className='box_img_basket'>
                                 <img src={product.img} alt="#" />
@@ -76,15 +76,14 @@ export default function BasketPage() {
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path id="Vector" d="M16 9V19H8V9H16ZM14.5 3H9.5L8.5 4H5V6H19V4H15.5L14.5 3ZM18 7H6V19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7Z" fill="#999999" />
                                 </svg>
-
                             </div>
                         </div>
-                    ))}
+                    )) : <img src='/img/empty.png' className='empty_basket_img' alt="#" />}
                 </div>
                 <div className='basket_right'>
                     <h3>Условия доставки и оплаты</h3>
                     <p>Представленные предложения ввиду своего комплексного характера сочетают в себе выгоду при затратах времени и средств и полноту реализации выбранного вами уровня усовершенствования.Представленные предложения ввиду своего комплексного характера сочетают в себе выгоду при затратах времени и средств и </p>
-                    <h3>Итого: <span className='main_color'>{totalAmount}</span>₽</h3>
+                    {products.length > 0 ? <h3>Итого: <span className='main_color'>{totalAmount}</span>₽</h3> : null}
                     <NavLink to={`/make_order`}><button>Оформить заказ</button></NavLink>
                 </div>
             </section>

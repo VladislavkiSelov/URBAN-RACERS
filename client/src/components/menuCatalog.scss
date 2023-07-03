@@ -1,0 +1,15 @@
+.box_menu_catalog {
+    display: flex;
+    width: 100%;
+    background: rgb(157, 157, 236);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 5;
+
+
+    .menu_catalog_left {
+        display: flex;
+    }
+}
