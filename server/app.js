@@ -26,7 +26,6 @@ app.get('/api/category/:categoryId', (request, response) => {
     response.send(dataResponse)
 });
 
-
 app.get('/api/category/:categoryId/product/:productId', (request, response) => {
     const categoryId = request.params.categoryId;
     const productId = request.params.productId;
@@ -35,3 +34,8 @@ app.get('/api/category/:categoryId/product/:productId', (request, response) => {
     const dataResponse = JSON.stringify(resultId);
     response.send(dataResponse)
 });
+
+app.post('/api/dataOrders', (request, response) => {
+    console.log(request.body);
+    response.send('ok');
+})

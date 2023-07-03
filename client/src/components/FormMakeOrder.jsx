@@ -1,5 +1,7 @@
 import React from 'react';
 import { Formik, Field, Form } from 'formik';
+import axios from "axios";
+const API_URL = "http://localhost:3000/api/dataOrders";
 const phoneNumberCheck = /^(\+38|8)?0[0-9]{9}$/;
 const emailCheck = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
 const postOfficeCheck = /^[1-9]{1,4}$/;
@@ -37,7 +39,7 @@ export default function FormMakeOrder() {
 
             validate={validate}
 
-            onSubmit={value => console.log(value)}
+            onSubmit={value => axios.post(`${API_URL}`, value)}
 
         >
             {({ errors }) => {
