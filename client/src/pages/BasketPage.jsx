@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import FormAnswerQuestions from '../components/FormAnswerQuestions';
+import { NavLink } from 'react-router-dom';
 
 export default function BasketPage() {
     const [products, setProducts] = useState(JSON.parse(localStorage.getItem('products')) || []);
@@ -84,7 +85,7 @@ export default function BasketPage() {
                     <h3>Условия доставки и оплаты</h3>
                     <p>Представленные предложения ввиду своего комплексного характера сочетают в себе выгоду при затратах времени и средств и полноту реализации выбранного вами уровня усовершенствования.Представленные предложения ввиду своего комплексного характера сочетают в себе выгоду при затратах времени и средств и </p>
                     <h3>Итого: <span className='main_color'>{totalAmount}</span>₽</h3>
-                    <button>Оформить заказ</button>
+                    <NavLink to={`/make_order`}><button>Оформить заказ</button></NavLink>
                 </div>
             </section>
             <FormAnswerQuestions />

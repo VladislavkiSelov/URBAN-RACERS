@@ -7,6 +7,7 @@ import Footer from '../section/Footer';
 import ProductCardPage from '../pages/ProductCardPage';
 import ErrorPage from '../pages/ErrorPage';
 import BasketPage from '../pages/BasketPage';
+import MakeOrderPage from '../pages/MakeOrderPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="*" element={<ErrorPage />}></Route>
           <Route path="/category" element={<CategoriesPage />}></Route>
           <Route path="/basket" element={<BasketPage />}></Route>
+          <Route path="/make_order" element={<MakeOrderPage />}></Route>
           <Route path="/category/:categoryId" element={<CategoryPage />}></Route>
           <Route path="/category/:categoryId/product/:productId" element={<ProductCardPage />}></Route>
         </Routes>
