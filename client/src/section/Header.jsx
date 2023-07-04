@@ -8,8 +8,10 @@ export default function Header() {
     function showCatalog() {
         if (statusCatalog === false) {
             setStatusCatalog(true)
+            document.querySelector('html').style.overflow = 'hidden'
         } else {
             setStatusCatalog(false)
+            document.querySelector('html').style.cssText = "overflow-y: scroll"
         }
     }
 
