@@ -21,7 +21,7 @@ app.get('/api/category', (request, response) => {
 
 app.get('/api/category/:categoryId', (request, response) => {
     const categoryId = request.params.categoryId;
-    const result = productCategories.find((item) => item.name === categoryId);
+    const result = productCategories.find((item) => item.category === categoryId);
     const dataResponse = JSON.stringify(result.products);
     response.send(dataResponse)
 });

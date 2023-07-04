@@ -13,7 +13,7 @@ export default function CategoryPage() {
             .then((res) => res.json())
             .then((res) => setArrayProducts(res)
             )
-    })
+    }, [params])
 
     return (
         <section className='wraper_products'>

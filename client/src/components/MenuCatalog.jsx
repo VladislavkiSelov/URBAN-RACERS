@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-export default function MenuCatalog() {
+export default function MenuCatalog({ statusCatalog }) {
     const [categories, setCategories] = useState([]);
     const [checkElement, setCheckElement] = useState('')
 
@@ -13,11 +13,13 @@ export default function MenuCatalog() {
             )
     }, []);
 
-
+    function closeElement() {
+        statusCatalog(false)
+    }
 
     return (
-        <div className='wraper_box_menu'>
-            <div className='box_menu_catalog container'>
+        <div className='wraper_box_menu' onClick={closeElement}>
+            <div className='box_menu_catalog container' onClick={(e) => e.stopPropagation()}>
                 <div className='menu_catalog_left'>
                     <div className='list'>
                         <nav onClick={(e) => setCheckElement(e.target.textContent)}>
@@ -28,14 +30,14 @@ export default function MenuCatalog() {
                                 <li>Контакты</li>
                                 <li>Распродажи</li>
                                 <li>Информация</li>
-                                <li><NavLink to="/basket">Корзина</NavLink></li>
+                                <li><NavLink to="/basket" onClick={closeElement}>Корзина</NavLink></li>
                             </ul>
                         </nav>
                     </div>
                     <div className='list_info'>
 
-                        {(checkElement == "Каталог" && <><h4>Выберите категорию</h4> <ul>{categories.map(item =>
-                            <NavLink to={`/category/${item.category}`}><li >{item.category}</li></NavLink>)}</ul></>)
+                        {(checkElement == "Каталог" && <><h4>Выберите категорию</h4>
+                            <ul>{categories.map(item => <NavLink to={`/category/${item.category}`}><li onClick={closeElement}>{item.category}</li></NavLink>)}</ul></>)
 
                             || (checkElement == "Информация" && <ul> <li>О компании</li><li>Доставка и оплата</li></ul>)
                         }

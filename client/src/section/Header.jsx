@@ -2,16 +2,21 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import MenuCatalog from '../components/MenuCatalog';
 
+
 export default function Header() {
     const [statusCatalog, setStatusCatalog] = useState(false);
+
+    if (statusCatalog === false) {
+        document.querySelector('html').style.cssText = "overflow-y: scroll"
+    }
+
+    if (statusCatalog === true) {
+        document.querySelector('html').style.overflow = 'hidden'
+    }
 
     function showCatalog() {
         if (statusCatalog === false) {
             setStatusCatalog(true)
-            document.querySelector('html').style.overflow = 'hidden'
-        } else {
-            setStatusCatalog(false)
-            document.querySelector('html').style.cssText = "overflow-y: scroll"
         }
     }
 
@@ -38,7 +43,7 @@ export default function Header() {
                         </div>
                     </div>
                 </div>
-                <div className='navigation container'>
+                <div className='navigation container' >
                     <div className='navigation_left'>
                         <li><NavLink to="/">
                             <div className='logo'>
@@ -47,15 +52,19 @@ export default function Header() {
                                     Автотюинга</p>
                             </div></NavLink></li>
                         <nav>
-                            <ul>
-                                <li><NavLink to="/">Главная</NavLink></li>
-                                <li onClick={showCatalog}>Каталог</li>
-                                <li>О нас</li>
-                                <li>Блоги и статьи</li>
-                                <li>Контакты</li>
-                                <li>Распродажи</li>
-                                <li>Информация</li>
-                                <li><NavLink to="/basket">Корзина</NavLink></li>
+                            <ul onClick={(e) => {
+                                if (e.target.textContent !== "Каталог") {
+                                    setStatusCatalog(false)
+                                }
+                            }}>
+                                <li><NavLink to="/" >Главная</NavLink></li>
+                                <li onClick={() => showCatalog()}>Каталог</li>
+                                <li >О нас</li>
+                                <li >Блоги и статьи</li>
+                                <li >Контакты</li>
+                                <li >Распродажи</li>
+                                <li >Информация</li>
+                                <li ><NavLink to="/basket">Корзина</NavLink></li>
                             </ul>
                         </nav>
                     </div>
@@ -64,11 +73,11 @@ export default function Header() {
                         <circle cx="10.8994" cy="10.8994" r="6" stroke="#F05454" stroke-width="2" />
                         <rect x="14.4355" y="15.8491" width="2" height="7" transform="rotate(-45 14.4355 15.8491)" fill="#F05454" />
                     </svg>
-                    <NavLink to="/category"><button type='button'>Категории</button></NavLink>
+                    <NavLink to="/category"><button type='button' onClick={() => setStatusCatalog(false)} >Категории</button></NavLink>
                     <span class="btn_open_modal_menu"></span>
                 </div>
             </header>
-            {statusCatalog === true && <MenuCatalog />}
+            {statusCatalog === true && <MenuCatalog statusCatalog={(value) => setStatusCatalog(value)} />}
         </div>
     )
 }

@@ -1,7 +1,6 @@
 export const productCategories = [
     {
         id: '1',
-        name: 'Турбины и турбокомплекты',
         category: 'Турбины и турбокомплекты',
         img: './img/12.png',
         products: [
@@ -196,78 +195,91 @@ export const productCategories = [
         id: '2',
         category: 'Тормоза и тормозные системы',
         img: './img/2.png',
+        products: []
 
     },
     {
         id: '3',
         category: 'Охлаждение',
         img: './img/11.png',
+        products: []
 
     },
     {
         id: '4',
         category: 'Подвеска',
         img: './img/1.png',
+        products: []
 
     },
     {
         id: '5',
         category: 'Подарки и мерч',
         img: './img/3.png',
+        products: []
 
     },
     {
         id: '6',
         category: 'Другое',
         img: './img/3.png',
+        products: []
 
     },
     {
         id: '7',
         category: 'Двигатель',
         img: './img/7.png',
+        products: []
 
     },
     {
         id: '8',
         category: 'Трансмиссия',
         img: './img/5.png',
+        products: []
 
     },
     {
         id: '9',
         category: 'Топливные системы',
         img: './img/8.png',
+        products: []
 
     },
     {
         id: '10',
         category: 'Интерьер и экстерер',
         img: './img/6.png',
+        products: []
 
     },
     {
         id: '11',
         category: 'Шины и диски',
         img: './img/9.png',
+        products: []
 
     },
     {
         id: '12',
         category: 'Оригинальные запчасти',
         img: './img/3.png',
+        products: []
 
     },
     {
         id: '13',
         category: 'Выпускная система',
         img: './img/10.png',
+        products: []
 
     },
     {
         id: '14',
         category: 'Впускные системы',
         img: './img/4.png',
+        products: []
 
     },
 
