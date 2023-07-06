@@ -32,7 +32,8 @@ export const productCategories = [
                     'Audi',
                     'Mini',
                     'Honda'
-                ]
+                ],
+                manufacturer_country: 'Germany'
             },
             {
                 id: 12,
@@ -62,7 +63,8 @@ export const productCategories = [
                     'Audi',
                     'BMW',
                     'Honda'
-                ]
+                ],
+                manufacturer_country: 'Japan'
             },
             {
                 id: 13,
@@ -91,7 +93,8 @@ export const productCategories = [
                     'BMW',
                     'Mini',
                     'Honda'
-                ]
+                ],
+                manufacturer_country: 'England'
             },
             {
                 id: 14,
@@ -120,7 +123,8 @@ export const productCategories = [
                     'Porsche',
                     'Mini',
                     'Honda'
-                ]
+                ],
+                manufacturer_country: 'France'
             },
             {
                 id: 15,
@@ -149,7 +153,8 @@ export const productCategories = [
                     'Porsche',
                     'Audi',
                     'BMW',
-                ]
+                ],
+                manufacturer_country: 'Italy'
             },
             {
                 id: 16,
@@ -175,7 +180,8 @@ export const productCategories = [
                 ],
                 car_model: [
                     'Porsche',
-                ]
+                ],
+                manufacturer_country: 'Ukraine'
             },
             {
                 id: 17,
@@ -204,7 +210,8 @@ export const productCategories = [
                     'Porsche',
                     'Audi',
                     'Honda'
-                ]
+                ],
+                manufacturer_country: 'USA'
             },
             {
                 id: 18,
@@ -234,7 +241,8 @@ export const productCategories = [
                     'Mini',
                     'Honda',
                     'Mersedes'
-                ]
+                ],
+                manufacturer_country: 'China'
             },
         ]
 

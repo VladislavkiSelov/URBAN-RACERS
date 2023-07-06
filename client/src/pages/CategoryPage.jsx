@@ -22,7 +22,7 @@ export default function CategoryPage() {
     }, [params]);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/api/getCarModal`)
+        fetch(`http://localhost:3000/api/getCarModal/category/${params.categoryId}`)
             .then((res) => res.json())
             .then((res) => setArrayCarModal(res)
             )
@@ -44,18 +44,8 @@ export default function CategoryPage() {
                 <div className='box_filters'>
                     <h3>Фильтр</h3>
                     <h4>Цена</h4>
-                    {
-                        useEffect(() => {
-                            fetch(`http://localhost:3000/api/category/${params.categoryId}`)
-                                .then((res) => res.json())
-                                .then((res) => setArrayProducts(res)
-                                )
-                        }, [minValue])
-                    }
                     <Slider
-                        range={
-                            true
-                        }
+                        range={true}
                         max={9999}
                         min={0}
                         defaultValue={[0, 10000]}
