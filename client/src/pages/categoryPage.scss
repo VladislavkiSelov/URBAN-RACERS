@@ -1,11 +1,76 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
 .wraper_products {
     background: url("../pages/img/baclground_road.png") top 0 right 0 no-repeat;
 }
 
 .box_products {
     display: flex;
+}
+
+.box_filters {
+    width: 375px;
+    margin-right: 80px;
+}
+
+.products {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding-top: 150px;
+}
+
+.box_input_range {
+    display: flex;
+    justify-content: space-between;
+
+    &>label {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.input_range_min,
+.input_range_max {
+    display: block;
+    border: none;
+    background: none;
+    max-width: 40px;
+}
+
+:where(.css-dev-only-do-not-override-14wwjjs).ant-slider-horizontal {
+    width: 100%;
+}
+
+:where(.css-dev-only-do-not-override-14wwjjs).ant-slider:hover .ant-slider-track {
+    background-color: $main_color;
+}
+
+:where(.css-dev-only-do-not-override-14wwjjs).ant-slider .ant-slider-track {
+    background-color: $main_color;
+}
+
+:where(.css-dev-only-do-not-override-14wwjjs).ant-slider .ant-slider-handle::after {
+    background-color: $main_color;
+    box-shadow: 0 0 0 2px $main_color;
+}
+
+:where(.css-dev-only-do-not-override-14wwjjs).ant-slider:hover .ant-slider-handle::after {
+    box-shadow: 0 0 0 2px $main_color;
+}
+
+:where(.css-dev-only-do-not-override-14wwjjs).ant-slider .ant-slider-handle:focus::after {
+    box-shadow: 0 0 0 2px $main_color;
 }

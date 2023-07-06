@@ -25,6 +25,13 @@ export const productCategories = [
                     { 'Производитель': 'BC Racing' },
                     { 'Страна производства': 'Тайвань' },
                     { 'Оригинальный номер по vin': '12344124124weq' },
+                ],
+                car_model: [
+                    'Volkswagen',
+                    'Porsche',
+                    'Audi',
+                    'Mini',
+                    'Honda'
                 ]
             },
             {
@@ -48,6 +55,13 @@ export const productCategories = [
                     { 'Производитель': 'BC Racing' },
                     { 'Страна производства': 'Тайвань' },
                     { 'Оригинальный номер по vin': '12344124124weq' },
+                ],
+                car_model: [
+                    'Volkswagen',
+                    'Porsche',
+                    'Audi',
+                    'BMW',
+                    'Honda'
                 ]
             },
             {
@@ -71,6 +85,12 @@ export const productCategories = [
                     { 'Производитель': 'BC Racing' },
                     { 'Страна производства': 'Тайвань' },
                     { 'Оригинальный номер по vin': '12344124124weq' },
+                ],
+                car_model: [
+                    'Audi',
+                    'BMW',
+                    'Mini',
+                    'Honda'
                 ]
             },
             {
@@ -94,6 +114,12 @@ export const productCategories = [
                     { 'Производитель': 'BC Racing' },
                     { 'Страна производства': 'Тайвань' },
                     { 'Оригинальный номер по vin': '12344124124weq' },
+                ],
+                car_model: [
+                    'Volkswagen',
+                    'Porsche',
+                    'Mini',
+                    'Honda'
                 ]
             },
             {
@@ -117,6 +143,12 @@ export const productCategories = [
                     { 'Производитель': 'BC Racing' },
                     { 'Страна производства': 'Тайвань' },
                     { 'Оригинальный номер по vin': '12344124124weq' },
+                ],
+                car_model: [
+                    'Volkswagen',
+                    'Porsche',
+                    'Audi',
+                    'BMW',
                 ]
             },
             {
@@ -140,6 +172,9 @@ export const productCategories = [
                     { 'Производитель': 'BC Racing' },
                     { 'Страна производства': 'Тайвань' },
                     { 'Оригинальный номер по vin': '12344124124weq' },
+                ],
+                car_model: [
+                    'Porsche',
                 ]
             },
             {
@@ -163,6 +198,12 @@ export const productCategories = [
                     { 'Производитель': 'BC Racing' },
                     { 'Страна производства': 'Тайвань' },
                     { 'Оригинальный номер по vin': '12344124124weq' },
+                ],
+                car_model: [
+                    'Volkswagen',
+                    'Porsche',
+                    'Audi',
+                    'Honda'
                 ]
             },
             {
@@ -186,6 +227,13 @@ export const productCategories = [
                     { 'Производитель': 'BC Racing' },
                     { 'Страна производства': 'Тайвань' },
                     { 'Оригинальный номер по vin': '12344124124weq' },
+                ],
+                car_model: [
+                    'Volkswagen',
+                    'Porsche',
+                    'Mini',
+                    'Honda',
+                    'Mersedes'
                 ]
             },
         ]
@@ -282,6 +330,42 @@ export const productCategories = [
         products: []
 
     },
-
-
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

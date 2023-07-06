@@ -19,6 +19,32 @@ app.get('/api/category', (request, response) => {
     response.send(dataResponse)
 });
 
+app.get('/api/getCarModal', (request, response) => {
+    let arrayCarModal = [];
+    function searchCarModal(value) {
+        if (Array.isArray(value) === true) {
+            value.forEach(item => {
+                searchCarModal(item)
+            })
+        }
+        if (Array.isArray(value) !== true && typeof value === 'object') {
+            for (let key in value) {
+                if (key === 'car_model') {
+                    value[key].forEach(element => {
+                        arrayCarModal.push(element)
+                    })
+                } else {
+                    searchCarModal(value[key])
+                }
+            }
+        }
+    }
+    searchCarModal(productCategories);
+    const setArrayCarModal = new Set(arrayCarModal);
+    const dataResponse = JSON.stringify([...setArrayCarModal]);
+    response.send(dataResponse);
+});
+
 app.get('/api/category/:categoryId', (request, response) => {
     const categoryId = request.params.categoryId;
     const result = productCategories.find((item) => item.category === categoryId);
@@ -29,7 +55,7 @@ app.get('/api/category/:categoryId', (request, response) => {
 app.get('/api/category/:categoryId/product/:productId', (request, response) => {
     const categoryId = request.params.categoryId;
     const productId = request.params.productId;
-    const resultArray = productCategories.find((item) => item.name === categoryId);
+    const resultArray = productCategories.find((item) => item.category === categoryId);
     const resultId = resultArray.products.find((item) => productId == item.id)
     const dataResponse = JSON.stringify(resultId);
     response.send(dataResponse)
