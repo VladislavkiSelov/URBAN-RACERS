@@ -71,29 +71,31 @@ export default function CategoryPage() {
             <div className='box_products container'>
                 <div className='box_filters'>
                     <h3>Фильтр</h3>
-                    <h4>Цена</h4>
-                    <Slider
-                        range={true}
-                        max={9999}
-                        min={0}
-                        defaultValue={[0, 10000]}
-                        onChange={(value) => getRangePrice({ min: value[0], max: value[1] })}
-                        step={10}
-                        value={[minValue, maxValue]}
-                    />
-                    <div className='box_input_range'>
-                        <label>
-                            ₽<input type="number" className='input_range_min' value={minValue} onChange={(e) => setMinValue(e.target.value)} />
-                        </label>
-                        <label>
-                            ₽<input type="number" className='input_range_max' value={maxValue} onChange={(e) => setMaxValue(e.target.value)} />
-                        </label>
+                    <div className='box_slider_price'>
+                        <h4>Цена</h4>
+                        <Slider
+                            range={true}
+                            max={9999}
+                            min={0}
+                            defaultValue={[0, 10000]}
+                            onChange={(value) => getRangePrice({ min: value[0], max: value[1] })}
+                            step={10}
+                            value={[minValue, maxValue]}
+                        />
+                        <div className='box_input_range'>
+                            <label>
+                                ₽<input type="number" className='input_range_min' value={minValue} onChange={(e) => setMinValue(e.target.value)} />
+                            </label>
+                            <label>
+                                ₽<input type="number" className='input_range_max' value={maxValue} onChange={(e) => setMaxValue(e.target.value)} />
+                            </label>
+                        </div>
                     </div>
-                    <div>
-                        <h4>Отфильтровать по моему авто</h4>
+                    <div className='box_select_model_auto'>
+                        <h4>Модель авто</h4>
                         <Select
                             showSearch
-                            placeholder="Select a person"
+                            placeholder="Модель авто"
                             optionFilterProp="children"
                             onChange={onChangeModal}
                             filterOption={(input, option) =>
@@ -102,11 +104,11 @@ export default function CategoryPage() {
                             options={optionsCarModal}
                         />
                     </div>
-                    <div>
+                    <div className='box_select_manufacturer_country'>
                         <h4>Страна производитель</h4>
                         <Select
                             showSearch
-                            placeholder="Select a person"
+                            placeholder="Страна производитель"
                             optionFilterProp="children"
                             onChange={onChangeManufacturerCountry}
                             filterOption={(input, option) =>
