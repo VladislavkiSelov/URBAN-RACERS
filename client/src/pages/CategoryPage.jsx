@@ -5,38 +5,66 @@ import CardProductSmall from '../components/CardProductSmall';
 import AdvertisingPromotions from '../components/AdvertisingPromotions';
 import { Slider, Select } from 'antd';
 
-
-
 export default function CategoryPage() {
     const params = useParams();
     const [arrayProducts, setArrayProducts] = useState([]);
     const [arrayCarModal, setArrayCarModal] = useState([]);
+    const [arrayManufacturerCountry, setArrayManufacturerCountry] = useState([]);
+    const [carModal, setCarModal] = useState('');
+    const [manufacturerCountry, setmanufacturerCountry] = useState([]);
     const [minValue, setMinValue] = useState(0);
     const [maxValue, setMaxValue] = useState(9999);
+    const optionsCarModal = arrayCarModal.map(item => Object({ value: item }));
+    const optionsManufacturerCountry = arrayManufacturerCountry.map(item => Object({ value: item }));
 
     useEffect(() => {
         fetch(`http://localhost:3000/api/category/${params.categoryId}`)
             .then((res) => res.json())
-            .then((res) => setArrayProducts(res)
-            )
+            .then((res) => setArrayProducts(res))
     }, [params]);
 
     useEffect(() => {
         fetch(`http://localhost:3000/api/getCarModal/category/${params.categoryId}`)
             .then((res) => res.json())
-            .then((res) => setArrayCarModal(res)
-            )
+            .then((res) => setArrayCarModal(res))
+    }, [params]);
+
+    useEffect(() => {
+        fetch(`http://localhost:3000/api/manufacturerCountry/category/${params.categoryId}`)
+            .then((res) => res.json())
+            .then((res) => setArrayManufacturerCountry(res))
     }, [params]);
 
     function getRangePrice({ min, max }) {
         setMinValue(min)
         setMaxValue(max)
     }
-    const optionsCarModal = arrayCarModal.map(item => Object({ value: item }));
 
-    const onChange = (value) => {
-        console.log(`selected ${value}`);
+    const onChangeModal = (value) => {
+        setCarModal(value)
     };
+
+    const onChangeManufacturerCountry = (value) => {
+        setmanufacturerCountry(value)
+    };
+
+    function applyFilter() {
+        const filter = {
+            car_model: carModal,
+            price: [minValue, maxValue],
+            manufacturer_country: manufacturerCountry,
+        }
+
+        fetch(`http://localhost:3000/api/category/filter/${params.categoryId}`, {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(filter),
+        })
+            .then((res) => res.json())
+            .then((res) => setArrayProducts(res))
+    }
 
     return (
         <section className='wraper_products'>
@@ -67,13 +95,27 @@ export default function CategoryPage() {
                             showSearch
                             placeholder="Select a person"
                             optionFilterProp="children"
-                            onChange={onChange}
+                            onChange={onChangeModal}
                             filterOption={(input, option) =>
                                 (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
                             }
                             options={optionsCarModal}
                         />
                     </div>
+                    <div>
+                        <h4>Страна производитель</h4>
+                        <Select
+                            showSearch
+                            placeholder="Select a person"
+                            optionFilterProp="children"
+                            onChange={onChangeManufacturerCountry}
+                            filterOption={(input, option) =>
+                                (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
+                            }
+                            options={optionsManufacturerCountry}
+                        />
+                    </div>
+                    <button onClick={applyFilter}>Применить</button>
                 </div>
                 <div className='products'>
                     {arrayProducts.map((product) => <CardProductSmall product={product} />)}

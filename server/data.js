@@ -33,7 +33,7 @@ export const productCategories = [
                     'Mini',
                     'Honda'
                 ],
-                manufacturer_country: 'Germany'
+                manufacturer_country: ['Japan', 'England', 'China',]
             },
             {
                 id: 12,
@@ -64,7 +64,7 @@ export const productCategories = [
                     'BMW',
                     'Honda'
                 ],
-                manufacturer_country: 'Japan'
+                manufacturer_country: ['Japan', 'England', 'France']
             },
             {
                 id: 13,
@@ -94,7 +94,7 @@ export const productCategories = [
                     'Mini',
                     'Honda'
                 ],
-                manufacturer_country: 'England'
+                manufacturer_country: ['Japan', 'England', 'France']
             },
             {
                 id: 14,
@@ -124,7 +124,7 @@ export const productCategories = [
                     'Mini',
                     'Honda'
                 ],
-                manufacturer_country: 'France'
+                manufacturer_country: ['Japan', 'England', 'France']
             },
             {
                 id: 15,
@@ -154,7 +154,7 @@ export const productCategories = [
                     'Audi',
                     'BMW',
                 ],
-                manufacturer_country: 'Italy'
+                manufacturer_country: ['Japan', 'Germany', 'Italy']
             },
             {
                 id: 16,
@@ -181,7 +181,7 @@ export const productCategories = [
                 car_model: [
                     'Porsche',
                 ],
-                manufacturer_country: 'Ukraine'
+                manufacturer_country: ['Japan', 'Germany', 'Italy']
             },
             {
                 id: 17,
@@ -206,12 +206,9 @@ export const productCategories = [
                     { 'Оригинальный номер по vin': '12344124124weq' },
                 ],
                 car_model: [
-                    'Volkswagen',
-                    'Porsche',
-                    'Audi',
-                    'Honda'
+                    'Nissan',
                 ],
-                manufacturer_country: 'USA'
+                manufacturer_country: ['USA', 'Germany', 'Ukraine']
             },
             {
                 id: 18,
@@ -240,9 +237,10 @@ export const productCategories = [
                     'Porsche',
                     'Mini',
                     'Honda',
-                    'Mersedes'
+                    'Mersedes',
+                    'Opel'
                 ],
-                manufacturer_country: 'China'
+                manufacturer_country: ['USA', 'Germany', 'China']
             },
         ]
 
