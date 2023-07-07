@@ -12,8 +12,9 @@ export default function CategoryPage() {
     const [arrayManufacturerCountry, setArrayManufacturerCountry] = useState([]);
     const [carModal, setCarModal] = useState('');
     const [manufacturerCountry, setmanufacturerCountry] = useState([]);
-    const [minValue, setMinValue] = useState(0);
+    const [minValue, setMinValue] = useState(89);
     const [maxValue, setMaxValue] = useState(9999);
+
     const optionsCarModal = arrayCarModal.map(item => Object({ value: item }));
     const optionsManufacturerCountry = arrayManufacturerCountry.map(item => Object({ value: item }));
 

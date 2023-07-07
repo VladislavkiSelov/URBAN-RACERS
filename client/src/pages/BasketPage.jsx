@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 import FormAnswerQuestions from '../components/FormAnswerQuestions';
+import DeletionСonfirmation from '../components/DeletionСonfirmation';
 import { NavLink } from 'react-router-dom';
 
+
 export default function BasketPage() {
+    const [statusModalDelete, setStatusModalDelete] = useState(false);
+    const [checkProduct, setCheckProduct] = useState([]);
     const [products, setProducts] = useState(JSON.parse(localStorage.getItem('products')) || []);
     const totalAmount = products.reduce((acc, item) => acc += (item.price * item.number), 0);
     function deleteProduct(elementDelete) {
         const resultDelete = products.filter(item => item.id !== elementDelete.id);
         localStorage.setItem('products', JSON.stringify(resultDelete));
         setProducts(resultDelete);
+        setStatusModalDelete(false)
     }
 
     function plusProduct(product) {
@@ -43,6 +48,7 @@ export default function BasketPage() {
 
     return (
         <>
+            {statusModalDelete && <DeletionСonfirmation setStatusModalDelete={(value) => setStatusModalDelete(value)} product={checkProduct} deleteProduct={(value) => deleteProduct(value)} />}
             <section className='basket container'>
                 <div className='basket_left'>
                     <h2>Корзина</h2>
@@ -72,7 +78,8 @@ export default function BasketPage() {
                                         </span></div>
                                 </div>
                             </div>
-                            <div className='delete' onClick={() => deleteProduct(product)}>
+                            {/* <div className='delete' onClick={() => deleteProduct(product)}> */}
+                            <div className='delete' onClick={() => { setStatusModalDelete(true); setCheckProduct(product) }}>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path id="Vector" d="M16 9V19H8V9H16ZM14.5 3H9.5L8.5 4H5V6H19V4H15.5L14.5 3ZM18 7H6V19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7Z" fill="#999999" />
                                 </svg>

@@ -1,0 +1,35 @@
+.box_delete_modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.box_window_delete {
+    background: white;
+    max-width: 500px;
+    padding: 50px;
+
+    h2 {
+        font-size: $typography_4;
+        font-weight: $font-weight6;
+        margin-bottom: 50px;
+        text-align: center
+    }
+
+    button {
+        @include btn;
+        padding: 15px 30px;
+    }
+
+    .box_btn {
+        display: flex;
+        justify-content: space-between;
+    }
+}
