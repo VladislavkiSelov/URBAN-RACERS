@@ -109,6 +109,15 @@ app.get('/api/category/:categoryId/product/:productId', (request, response) => {
     response.send(dataResponse)
 });
 
+app.get('/api/category/:categoryId/product/:productId/comment', (request, response) => {
+    const categoryId = request.params.categoryId;
+    const productId = request.params.productId;
+    const findCategory = productCategories.find(item => item.category === categoryId);
+    const findProduct = findCategory.products.find(item => item.id === productId * 1);
+    const dataResponse = JSON.stringify(findProduct.comment);
+    response.send(dataResponse)
+});
+
 app.post('/api/dataOrders', (request, response) => {
     console.log(request.body);
     response.send('ok');
@@ -123,7 +132,18 @@ app.post('/api/category/filter/:categoryId', (request, response) => {
     response.send(dataResponse)
 });
 
-
+app.post('/api/category/:categoryId/product/:productId', (request, response) => {
+    const categoryId = request.params.categoryId;
+    const productId = request.params.productId;
+    const findCategory = productCategories.find(item => item.category === categoryId);
+    const findProduct = findCategory.products.find(item => item.id === productId * 1);
+    findProduct.comment.push(request.body);
+    console.log(findProduct);
+    // const resultArray = productCategories.find((item) => item.category === categoryId);
+    // const resultId = resultArray.products.find((item) => productId == item.id)
+    // const dataResponse = JSON.stringify(resultId);
+    // response.send(dataResponse)
+});
 
 
 

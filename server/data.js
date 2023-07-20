@@ -33,7 +33,8 @@ export const productCategories = [
                     'Mini',
                     'Honda'
                 ],
-                manufacturer_country: ['Japan', 'England', 'China',]
+                manufacturer_country: ['Japan', 'England', 'China',],
+                comment: []
             },
             {
                 id: 12,
@@ -64,7 +65,8 @@ export const productCategories = [
                     'BMW',
                     'Honda'
                 ],
-                manufacturer_country: ['Japan', 'England', 'France']
+                manufacturer_country: ['Japan', 'England', 'France'],
+                comment: []
             },
             {
                 id: 13,
@@ -94,7 +96,8 @@ export const productCategories = [
                     'Mini',
                     'Honda'
                 ],
-                manufacturer_country: ['Japan', 'England', 'France']
+                manufacturer_country: ['Japan', 'England', 'France'],
+                comment: []
             },
             {
                 id: 14,
@@ -124,7 +127,8 @@ export const productCategories = [
                     'Mini',
                     'Honda'
                 ],
-                manufacturer_country: ['Japan', 'England', 'France']
+                manufacturer_country: ['Japan', 'England', 'France'],
+                comment: []
             },
             {
                 id: 15,
@@ -154,7 +158,8 @@ export const productCategories = [
                     'Audi',
                     'BMW',
                 ],
-                manufacturer_country: ['Japan', 'Germany', 'Italy']
+                manufacturer_country: ['Japan', 'Germany', 'Italy'],
+                comment: []
             },
             {
                 id: 16,
@@ -181,7 +186,8 @@ export const productCategories = [
                 car_model: [
                     'Porsche',
                 ],
-                manufacturer_country: ['Japan', 'Germany', 'Italy']
+                manufacturer_country: ['Japan', 'Germany', 'Italy'],
+                comment: []
             },
             {
                 id: 17,
@@ -208,7 +214,8 @@ export const productCategories = [
                 car_model: [
                     'Nissan',
                 ],
-                manufacturer_country: ['USA', 'Germany', 'Ukraine']
+                manufacturer_country: ['USA', 'Germany', 'Ukraine'],
+                comment: []
             },
             {
                 id: 18,
@@ -240,7 +247,8 @@ export const productCategories = [
                     'Mersedes',
                     'Opel'
                 ],
-                manufacturer_country: ['USA', 'Germany', 'China']
+                manufacturer_country: ['USA', 'Germany', 'China'],
+                comment: []
             },
         ]
 

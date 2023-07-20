@@ -2,14 +2,26 @@ import React from 'react';
 import { useParams, } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import FormAnswerQuestions from '../components/FormAnswerQuestions';
+import CommentBlock from '../components/CommentBlock';
 
 export default function ProductCardPage() {
     const params = useParams();
     const [product, setProduct] = useState([]);
+    const [comment, setComment] = useState([]);
+    const [activeBtn, setActiveBtn] = useState('Характеристики');
+    const API_URL = `http://localhost:3000/api/category/${params.categoryId}/product/${params.productId}`;
+
     useEffect(() => {
-        fetch(`http://localhost:3000/api/category/${params.categoryId}/product/${params.productId}`)
+        fetch(API_URL)
             .then((res) => res.json())
             .then((res) => setProduct(res)
+            )
+    }, []);
+
+    useEffect(() => {
+        fetch(`${API_URL}/comment`)
+            .then((res) => res.json())
+            .then((res) => setComment(res)
             )
     }, []);
 
@@ -28,6 +40,13 @@ export default function ProductCardPage() {
         }
     }
 
+    function clickBtn(e) {
+        // Array.from(document.querySelectorAll('.box_btn>button')).forEach(item => item.classList.contains("active_btn") === true ? item.classList.remove("active") : false)
+        Array.from(document.querySelectorAll('.box_btn>button')).forEach(item => item.classList.contains("active_btn") === true ? item.classList.remove("active_btn") : false)
+        e.target.classList.add('active_btn')
+        setActiveBtn(e.target.textContent);
+    }
+
     return (
         <>
             <div className='block_product container'>
@@ -43,14 +62,18 @@ export default function ProductCardPage() {
                     <h3>Описание</h3>
                     <p>{product.description}</p>
                     <div className='box_additional_information'>
-                        <div className='box_btn'>
+                        <div className='box_btn' onClick={(e) => clickBtn(e)}>
                             <button className='active_btn'>Характеристики</button>
                             <button>Аналоги</button>
                             <button>Отзывы</button>
                         </div>
                         <div className='box_information'>
-                            <h4>Характеристики</h4>
-                            {(product.characteristics || []).map(item => <p>{Object.keys(item).join()} : <span>{Object.values(item).join()} </span></p>)}
+                            <h4>{activeBtn}</h4>
+                            {activeBtn === 'Характеристики' && (product.characteristics || []).map(item => <p>{Object.keys(item).join()} : <span>{Object.values(item).join()} </span></p>)}
+                            {activeBtn === 'Аналоги' && 'Аналоги'}
+                            {activeBtn === 'Отзывы' && <CommentBlock API_URL={API_URL} />}
+                            {activeBtn === 'Отзывы' && comment.map(item => <div><p>{item.name}</p> <p>{item.comment}</p></div>)
+                            }
                         </div>
                     </div>
                 </div>
