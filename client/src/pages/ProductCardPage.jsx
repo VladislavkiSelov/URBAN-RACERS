@@ -3,9 +3,12 @@ import { useParams, } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import FormAnswerQuestions from '../components/FormAnswerQuestions';
 import CommentBlock from '../components/CommentBlock';
+import CardComment from '../components/CardComment';
+import { FrownOutlined } from '@ant-design/icons';
 
 export default function ProductCardPage() {
     const params = useParams();
+    const [newComment, setNewComment] = useState({});
     const [product, setProduct] = useState([]);
     const [comment, setComment] = useState([]);
     const [activeBtn, setActiveBtn] = useState('Характеристики');
@@ -23,7 +26,7 @@ export default function ProductCardPage() {
             .then((res) => res.json())
             .then((res) => setComment(res)
             )
-    }, []);
+    }, [newComment]);
 
     function addProductBasket() {
         let statusСheck = true;
@@ -41,7 +44,6 @@ export default function ProductCardPage() {
     }
 
     function clickBtn(e) {
-        // Array.from(document.querySelectorAll('.box_btn>button')).forEach(item => item.classList.contains("active_btn") === true ? item.classList.remove("active") : false)
         Array.from(document.querySelectorAll('.box_btn>button')).forEach(item => item.classList.contains("active_btn") === true ? item.classList.remove("active_btn") : false)
         e.target.classList.add('active_btn')
         setActiveBtn(e.target.textContent);
@@ -70,9 +72,9 @@ export default function ProductCardPage() {
                         <div className='box_information'>
                             <h4>{activeBtn}</h4>
                             {activeBtn === 'Характеристики' && (product.characteristics || []).map(item => <p>{Object.keys(item).join()} : <span>{Object.values(item).join()} </span></p>)}
-                            {activeBtn === 'Аналоги' && 'Аналоги'}
-                            {activeBtn === 'Отзывы' && <CommentBlock API_URL={API_URL} />}
-                            {activeBtn === 'Отзывы' && comment.map(item => <div><p>{item.name}</p> <p>{item.comment}</p></div>)
+                            {activeBtn === 'Аналоги' && <div className='box_noData'><FrownOutlined className='noData' /></div>}
+                            {activeBtn === 'Отзывы' && <CommentBlock API_URL={API_URL} setNewComment={(value) => setNewComment(value)} />}
+                            {activeBtn === 'Отзывы' && comment.map(item => <CardComment item={item} />)
                             }
                         </div>
                     </div>

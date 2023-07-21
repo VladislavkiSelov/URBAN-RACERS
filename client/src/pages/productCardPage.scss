@@ -106,7 +106,7 @@
         }
 
         background: $main_1;
-        padding: 10px;
+        padding: 20px;
     }
 }
 
@@ -145,5 +145,17 @@
 
     button {
         @include btn;
+        margin-bottom: 50px;
     }
+}
+
+.box_noData {
+    display: flex;
+    justify-content: center;
+}
+
+.noData {
+    margin: 50px 0;
+    font-size: 100px;
+    color: $main_color;
 }

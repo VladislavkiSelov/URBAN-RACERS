@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
 import { Formik, Field, Form } from 'formik';
 import axios from "axios";
 const nameCheck = /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/u;
 
-export default function CommentBlock({ API_URL }) {
+export default function CommentBlock({ API_URL, setNewComment }) {
     const validate = values => {
         const errors = {};
         if (!nameCheck.test(values.name)) {
@@ -22,12 +21,15 @@ export default function CommentBlock({ API_URL }) {
 
             validate={validate}
 
-            onSubmit={values => {
+            onSubmit={(values) => {
                 const newComment = {
                     name: values.name,
                     comment: values.comment
-                };
+                }
+                setNewComment(newComment)
                 axios.post(`${API_URL}`, newComment);
+                values.name = '';
+                values.comment = ''
             }
             }
 
