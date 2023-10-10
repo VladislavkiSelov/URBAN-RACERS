@@ -7,9 +7,6 @@
 
 <p>Запуск проекта</p>
 <p>Для запуска проекта необходимо выполнить следующие действия</p>
-<p>Склонировать проект на ваш компьютер с Github с помощью команды:</p>
-<p>git clone https://github.com/VladislavkiSelov/URBAN-RACERS.git</p>
-<p>Установить зависимости:</p>
-<p>npm install</p>
-<p>Запустить проект:</p>
-<p>npm start</p>
+<p>Склонировать проект на ваш компьютер с Github с помощью команды: git clone https://github.com/VladislavkiSelov/URBAN-RACERS.git</p>
+<p>Установить зависимости: npm install</p>
+<p>Запустить проект: npm start</p>
