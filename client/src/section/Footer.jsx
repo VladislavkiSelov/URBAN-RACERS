@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function Footer() {
     return (
@@ -71,7 +72,7 @@ export default function Footer() {
                 </div>
                 <div className='register_login'>
                     <button type='button' className='login'>Вход</button>
-                    <button type='button' className='register'>регистрация</button>
+                    <NavLink to="/registration"><button type='button' className='register'>регистрация</button></NavLink>
                     <p>© 2022 UrbanRacers</p>
                 </div>
             </footer>

@@ -23,9 +23,9 @@ export default function MenuCatalog({ statusCatalog }) {
                 <div className='menu_catalog_left'>
                     <div className='list'>
                         <nav onClick={(e) => setCheckElement(e.target.textContent)}>
-                            <ul>
+                            <ul >
                                 <li>Каталог</li>
-                                <li>О нас</li>
+                                <li><NavLink to="/aboutUs" onClick={closeElement}>О нас</NavLink></li>
                                 <li>Блоги и статьи</li>
                                 <li>Контакты</li>
                                 <li>Распродажи</li>

@@ -26,8 +26,8 @@ export default function CommentBlock({ API_URL, setNewComment }) {
                     name: values.name,
                     comment: values.comment
                 }
-                setNewComment(newComment)
                 axios.post(`${API_URL}`, newComment);
+                setNewComment(newComment)
                 values.name = '';
                 values.comment = ''
             }

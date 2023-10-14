@@ -59,7 +59,7 @@ export default function Header() {
                             }}>
                                 <li><NavLink to="/" >Главная</NavLink></li>
                                 <li onClick={() => showCatalog()}>Каталог</li>
-                                <li >О нас</li>
+                                <li><NavLink to="/aboutUs">О нас</NavLink></li>
                                 <li >Блоги и статьи</li>
                                 <li >Контакты</li>
                                 <li >Распродажи</li>
